@@ -30,12 +30,17 @@ import org.junit.internal.AssumptionViolatedException;
 class Base {
 
     protected void run() {
-        double r = Math.random();
-        if (r < 0.1) {
-            fail("oops");
-        } else if (r < 0.2) {
-            throw new AssumptionViolatedException("skipping");
+        first10factorials();
+    }
+    
+    void first10factorials()
+    {
+        int ans=1;
+        for(int i=1;i<=10;i++)
+        {    
+            ans*=i;
+            System.out.println("!"+i+"="+ans);
         }
     }
-
+        
 }
